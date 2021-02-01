@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Get the binary and extract it
-wget https://github.com/crypto-com/chain-main/releases/download/v0.8.0-crossfire/chain-main_0.8.0-crossfire_Linux_x86_64.tar.gz -O /home/crypto-solutions
-tar -zxvf /home/crypto-solutions/chain-main_0.8.0-crossfire_Linux_x86_64.tar.gz && cd /home/crypto-solutions/chain-main_0.8.0-crossfire_Linux_x86_64
+wget https://github.com/crypto-com/chain-main/releases/download/v0.8.0-crossfire/chain-main_0.8.0-crossfire_Linux_x86_64.tar.gz -O /home/crypto-solutions/chain-main_0.8.0-crossfire_Linux_x86_64.tar.gz
+sudo tar -zxvf /home/crypto-solutions/chain-main_0.8.0-crossfire_Linux_x86_64.tar.gz -O /usr/local/bin/chain-maind 
 
 # Verify the version
 VERSION=$(chain-maind version)

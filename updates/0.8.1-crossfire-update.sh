@@ -24,10 +24,9 @@ quit
 rm ~/.chain-maind/config/addrbook.json
 
 # Increase your memory pool size:   
-# File location: ~/.chain-maind/config/config.toml
-# Setting
-# Maximum number of transactions in the mempool
-size = 20000
+OLDPOOL="size = 5000"
+NEWPOOL="size = 20000"
+sed 's/"$OLDPOOL"/"$NEWPOOL"/g'  ~/.chain-maind/config/config.toml
 
 # Start the service with the new files and settings
 sudo systemctl start chain-maind.service
